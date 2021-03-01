@@ -10,6 +10,10 @@ Commit changes:
 ```
 git commit [-m message]
 ```
+> If you need to change a commit message already commited:
+  ```
+  git commit --amend
+  ```
 Push new branch to git repo:
 ```
 git push --set-upstream origin branch_name
