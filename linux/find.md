@@ -66,7 +66,7 @@ $ find . -name +1
 
 Ej.:
 ```
-find /opt/sera/logs -name "sera.log.????-??-??" -mtime +10 -ls -exec gzip {} \;
+find /opt/logs -name "log.????-??-??" -mtime +10 -ls -exec gzip {} \;
 ```
 
 Para sacar el último fichero actualizado en el dir. actual:
@@ -79,21 +79,21 @@ $ find . -mmin -40
 ```
 
 #### find + exec:
-1. find /opt/sera/adsl/logs -name "GestorAlarmasProactivas.log.????-??-??" -mtime +10 -ls -exec gzip {} \;
-2. find /opt/sera/adsl/logs -name "sera.log.????-??-??" -mtime +10 -ls -exec gzip {} \;
+1. find /opt/logs -name "Pro.log.????-??-??" -mtime +10 -ls -exec gzip {} \;
+2. find /opt/logs -name "era.log.????-??-??" -mtime +10 -ls -exec gzip {} \;
 
 Con la siguiente orden buscamos dentro del dir /users los archivos que sean mayores que 10 megas:
 ```
 find /users -size +10240000c -exec ls -lrst {} \;
 ```
 ```
-find . -name "C2011-0*" -mtime +20 -exec gzip -v {} \;
+find . -name "2011-0*" -mtime +20 -exec gzip -v {} \;
 ```
 Con esta orden comprimimos todos los ficheros que cumplan el patrón en el dir. actual (en este caso /users/eoc//HcoDiscoBkp de M2OC1) y que verifiquen que tienen más de 20 días.
 
 #### find + exec + mtime:
 ```
-find . -name "core.socmv2.*" -mtime +7 -exec gzip -v {} \;
+find . -name "core.*" -mtime +7 -exec gzip -v {} \;
 ```
 
 Para buscar una cadena de texto en los ficheros de un sistema:
@@ -116,7 +116,7 @@ find . -type f -user myname -name "*.ext" -exec grep -il "hello" {} \
 and obviously you can still output this to a log file using the redirect > 
 
 ```
-find /users/*/LOG_AGENTE -size +10240000c -exec ls -lrst {} \; 2> /dev/null | grep 'log$' | awk '{ print $10 }' > ~/salida.txt
+find /users/*/LOG -size +10240000c -exec ls -lrst {} \; 2> /dev/null | grep 'log$' | awk '{ print $10 }' > ~/salida.txt
 ```
 
 To find symlinks in all subdirectories from the current directory:
@@ -132,5 +132,5 @@ find . -type f -exec mv -t ../input/ {} +
 To remove executable bit from all txt files under a directory (first we need to tell our shell the new line character is \n as if not it will fail with txt files containing spaces in their names and would cause major problems on some files):
 ```
 $ export IFS=$'\n'
-$ for i in `find ~/Documents/oposRelated -name '*.txt' -type f`; do chmod -x $i; done
+$ for i in `find ~/Documents/opos -name '*.txt' -type f`; do chmod -x $i; done
 ```

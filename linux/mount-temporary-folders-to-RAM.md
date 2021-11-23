@@ -8,7 +8,7 @@ sudo gedit /etc/fstab
 
 and paste this two lines:
 ```
-    tmpfs /tmp tmpfs noatime,nodiratime,nodev,nosuid,mode=1777,defaults 0 0
+tmpfs /tmp tmpfs noatime,nodiratime,nodev,nosuid,mode=1777,defaults 0 0
 
-    tmpfs /var/tmp tmpfs noatime,nodiratime,nodev,nosuid,mode=1777,defaults 0 0
+tmpfs /var/tmp tmpfs noatime,nodiratime,nodev,nosuid,mode=1777,defaults 0 0
 ```
