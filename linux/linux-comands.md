@@ -73,19 +73,19 @@ Ejemplos: umount /dev/hda2, umount /mnt/lnx
 
 * **wget**
 Descripción: programa para descargar ficheros por http o ftp.
-Ejemplos: wget http://www.rediris.es/documento.pdf
+Ejemplos: wget http://www.xxxxxxx.es/documento.pdf
 
 * **lynx**
 Descripción: navegador web con opciones de ftp, https.
-Ejemplos: lynx www.ibercom.com, lynx --source http://www.ibercom.com/script.sh | sh
+Ejemplos: lynx www.xxxxxxx.com, lynx --source http://www.xxxxxxx.com/script.sh | sh
 
 * **ftp**
 Descripción: cliente FTP.
-Ejemplos: ftp ftp.ibercom.com
+Ejemplos: ftp ftp.xxxxxxx.com
 
 * **whois**
 Descripción: whois de dominios.
-Ejemplos: whois ibercom.com
+Ejemplos: whois xxxxxxx.com
 
 * **who**
 Descripción: muestra los usuarios de sistema que han iniciado una sesion.
@@ -93,7 +93,7 @@ Ejemplos: who, w, who am i
 
 * **mail**
 Descripción: envio y lectura de correo electronico.
-Ejemplos: mail pepe@ibercom.com < fichero, mail -v pepe@ibercom.com < fichero
+Ejemplos: mail pepe@xxxxxxx.com < fichero, mail -v pepe@xxxxxxx.com < fichero
 
 * **sort**
 Descripción: ordena el contenido de un fichero.
@@ -161,11 +161,11 @@ Ejemplos: free
 
 * **ping**
 Descripción: heramienta de red para comprobar entre otras cosas si llegamos a un host remoto.
-Ejemplos: ping www.rediris.es
+Ejemplos: ping www.xxxxxxx.es
 
 * **traceroute**
 Descripción: herramienta de red que nos muestra el camino que se necesita para llegar a otra maquina.
-Ejemplos: traceroute www.rediris.es
+Ejemplos: traceroute www.xxxxxxx.es
 
 * **du**
 Descripción: =disk use. uso de disco. Muestra el espacio que esta ocupado en disco.
@@ -242,4 +242,3 @@ Al hacer **more**:
 f : adelante
 b: volver arriba
 v: iniciar vi en la linea que estamos
-

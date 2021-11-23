@@ -1,4 +1,4 @@
-
+```
 GSSAPIAuthentication yes
 GSSAPIDelegateCredentials yes
 
@@ -9,17 +9,20 @@ Host jump_name_host
   User myuser
 
 
-######################
-\#\# List of remote nodes ##
-######################
-\# Hosts with a common string in their hostnames
+###########################
+## List of remote nodes  ##
+###########################
+# Hosts with a common string in their hostnames
 
 Host common_string_from_hosts*
   hostname %h.domain
   ProxyCommand ssh myuser@jump_name_host -W %h:%p
   User myuser
 
-\# A particular host
+
+###########################
+#     A particular host   #
+###########################
 Host remote_host
   #AAAA ports
   LocalForward 18080 remote_host:18080
@@ -37,7 +40,7 @@ Host remote_host
   #Prometheus
   LocalForward 9091 remote_host:9090
 
-\# By ip
+# By ip
 Host 10.10.10.*
   ProxyCommand ssh frueda@remote_host -W %h:%p
   User otherusername
@@ -45,4 +48,5 @@ Host 10.10.10.*
 Host 11.11.11.*
   ProxyCommand ssh frueda@remote_host -W %h:%p
   User root
+```
 
