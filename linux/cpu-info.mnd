@@ -1,0 +1,27 @@
+To discover information about cpu's in a server/node:
+```
+dmidecode -t processor
+```
+```	
+cat /proc/cpuinfo
+```
+	
+We can obtain the number of processors in different ways:
+```
+$ htop
+```
+it shows at the top the graphic of every processor
+```
+$ lscpu
+```
+```
+$ nproc --all
+```
+```
+$ cat /proc/cpuinfo  | more
+```
+
+Command to get info from a particular process:
+```	
+ps --no-headers -u process_name | sed -e 's/\^\[[:space:]]*//' | cut -d ' ' -f1 | xargs -I pid pidstat -p pid 1 10
+```
