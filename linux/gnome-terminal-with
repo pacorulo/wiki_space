@@ -1,0 +1,57 @@
+We need to install gnome-termninal tool:
+```
+sudo apt install gnome-terminal
+```
+We also need to install sshpass if we need/want to put the password inside the desktop file just to connect and login automatically into the remote node;:
+```
+sudo apt install sshpass
+```
+
+
+Once we have both tools we can create a fileName.desktop file in our desktop (or in any other place, but in our desktop makes it very easy to be reached) with the following content:
+```
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=true
+Exec=gnome-terminal -- sh -c "sshpass -p xxxx ssh -o StrictHostKeyChecking=no ubuntu@192.168.1.3"
+Name=SSH to DS210 Ubuntu
+Comment=SSH
+Icon=org.gnome.Terminal
+```
+
+or something like:
+```
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=true
+Exec=gnome-terminal -- sh -c "sshpass -p xxxx ssh -o StrictHostKeyChecking=no ubuntu@192.168.1.3"
+Name=SSH to DS210 Ubuntu
+Comment=SSH
+Icon=org.gnome.Terminal
+```
+where the difference is only the first line but it does not matter as both files work the same.
+
+Then, we need to enable the option "Allow execution file as program" in its 'Permissions' tab on Properties file. Doing it, just double click will execute the file and execute the connection.
+
+
+We can use a text file to place the ip (just think removing and changing the ip from the txt file will let us to connect to any machine that uses same user and passwd (very useful on dev. environments), in the way:
+```
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=true
+Exec=gnome-terminal -- sh -c "sshpass -p datastax ssh -o StrictHostKeyChecking=no ubuntu@$(cat /home/username/ip.txt)"
+Name=SSH to DS210 Ubuntu
+Comment=SSH
+Icon=org.gnome.Terminal
+```
+
+Originally, the file we used in an Ubuntu VM was like:
+```
+# Original command from DSE210 Ubuntu node from Datastax, but did not work
+#Exec=gnome-terminal -- 'bash -c "SSHPASS=xxxx sshpass ssh -o StrictHostKeyChecking=no ubuntu@192.168.1.3"'
+```
+but it did not work in our Linux Mint machine. Note there is another way to pass the passwd to the connection string.
