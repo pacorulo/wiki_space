@@ -94,6 +94,14 @@ else
 
 			fi
 
+			NUM_LINEA=1
+			rm oldname newname
+			cd $DIR
+			echo
+			echo
+			echo
+			echo
+
 		fi
 
 	done < kk
