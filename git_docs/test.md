@@ -98,6 +98,9 @@ else
 
 	done < kk
 
+	#Borramos el fichero kk y no dejamos porquería
+	rm kk
+
 fi
 
 #Si llegamos aquí podemos newnameizar con éxito
