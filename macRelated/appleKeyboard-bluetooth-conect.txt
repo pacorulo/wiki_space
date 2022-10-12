@@ -1,0 +1,51 @@
+How to pair Magic Keyboard
+
+
+1. Make sure the keyboard is off. The best way to do that is to power cycle by removing batteries and plugging them back.
+
+2. Open terminal. Run the following commands:
+```
+sudo bluetoothctl[bluetooth]# power on
+[bluetooth]# agent KeyboardOnly
+[bluetooth]# default-agent
+[bluetooth]# pairable on
+```
+3. Power on your Magic Keyboard. Hold the power button and do not release until step 5.
+
+4. In bluetoothctl type:
+```
+[bluetooth]# scan on
+```
+It will start scanning for available Bluetooth devices. What we are looking for would be indicated like this:
+```
+[NEW] Device 78:CA:39:XX:XX:XX Apple Wireless Keyboard
+```
+5. Copy MAC address for the keyboard from the previous step. Add keyboard as trusted device:
+```
+[bluetooth]# trust 78:CA:39:XX:XX:XX
+```
+Once it trusted start pairing:
+```
+[bluetooth]# pair 78:CA:39:XX:XX:XX
+Attempting to pair with 78:CA:39:XX:XX:XX
+[CHG] Device 78:CA:39:4F:CA:AF Connected: yes
+[agent] PIN code: 299251
+```
+> NEXT STEP was executed automatically, I didn't have to insert the PIN number 
+
+5. Release the 'Power on' button on the keyboard and type PIN code on the keyboard. It won’t indicate anything in the terminal, but that's fine. Commit PIN by hitting ‘Enter’. If pairing is successful output will be similar to that:
+```
+[CHG] Device 78:CA:39:XX:XX:XX ServicesResolved: yes
+[CHG] Device 78:CA:39:XX:XX:XX Paired: yes
+Pairing successful
+```
+
+> I DIDN'T NEED NEXT STEP, but here just in case...
+
+6. Now your keyboard is paired, but most likely it will be acting as a Numpad. To resolve this issue run following in terminal:
+```
+sudo apt update
+sudo apt install numlockx
+numlockx off
+```
+*Probably it also makes sense to add 'numlock off' as startup command in 'gnome-session-properties'
