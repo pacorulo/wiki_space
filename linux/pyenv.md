@@ -89,7 +89,7 @@ eval "$(pyenv virtualenv-init -)"
 pyenv install --list  
 ```
   
-    2. Installing any from the list:
+2. Installing any from the list:
 >
 pyenv install 3.9.9  
 >
