@@ -5,21 +5,20 @@
    apt install python3
    ```
   
-    2. Install pip3:
-```bash
-sudo apt install pip3  
+2. Install pip3:
+   ```bash
+   sudo apt install pip3  
 
-$ pip3 --version  
-pip 22.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10)
-```
+   $ pip3 --version  
+   pip 22.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10)
+   ```
 
-    3. Install package dependencies for **pyenv**  
-    
-```bash
-apt install build-essential libssl-dev zlib1g-dev \    
-libbz2-dev libreadline-dev libsqlite3-dev curl git \    
-libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
-```
+3. Install package dependencies for **pyenv**  
+    	```bash
+	apt install build-essential libssl-dev zlib1g-dev \    
+	libbz2-dev libreadline-dev libsqlite3-dev curl git \    
+	libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+	```
 
     4. Finish the install of pyenv:
 
