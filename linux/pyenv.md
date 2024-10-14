@@ -84,7 +84,7 @@ eval "$(pyenv virtualenv-init -)"
 
 ## Installing virtual envs
 
-    1. Check the available python versions:
+1. Check the available python versions:
 >
 pyenv install --list  
 >
