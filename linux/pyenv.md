@@ -1,8 +1,8 @@
 # How to install pyenv
 
 1. First install python3:
-``` bash
-apt install python3
+```bash
+$ apt install python3
 ```
 
     2. Install pip3:
