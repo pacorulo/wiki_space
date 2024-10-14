@@ -1,12 +1,12 @@
-# How to install pyenv
+# How to install pyenv (in Linux Mint)
   
-1. First install python3:
+1. First install **python3**:
    ```
    apt install python3
    ```
   
-2. Install pip3:
-   ```bash
+2. Install **pip3**:
+   ```
    sudo apt install pip3  
 
    $ pip3 --version  
@@ -14,14 +14,14 @@
    ```
 
 3. Install package dependencies for **pyenv**  
-   ```bash
+   ```
    apt install build-essential libssl-dev zlib1g-dev \    
    libbz2-dev libreadline-dev libsqlite3-dev curl git \    
    libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
    ```
   
-4. Finish the install of pyenv:
-   ```bash
+4. Finish the install of *pyenv*:
+   ```
    $ curl https://pyenv.run | bash
    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
@@ -74,30 +74,30 @@
    eval "$(pyenv virtualenv-init -)"
    ```
 
-5. I just added to .barshrc:
+5. I just added to **.barshrc**:
    ```
    eval "$(pyenv virtualenv-init -)"
    ```
 
 ## Installing virtual envs
-1. Check the available python versions:
+1. Check the `available python versions`:
    ```
    pyenv install --list  
    ```
   
-2. Installing any from the list:
+2. `Installing` any from the list:
    ```
    pyenv install 3.9.9  
    ```
   
-3. Checking current versions (already installed and managed by pyenv):
+3. `Checking current versions` (already installed and managed by pyenv):
    ```
    $ pyenv versions  
    * system (set by /home/pakete/.pyenv/version)  
    3.9.9  
    ```
   
-4. Changing to the newly installed version (and checking we are currently using it):
+4. `Changing/Moving` to the newly installed version (and checking we are currently using it):
    ```
    pyenv local 3.9.9  
    ```
@@ -108,7 +108,7 @@
    * 3.9.9 (set by /home/pakete/vagrant/jdriver/.python-version)
    ```
   
-5. Now I can create other venvs under the one created and use each one for any purpose (but under same py version):
+5. Now I can create other `venvs` under the one created and use each one for any purpose (but under same py version):
    ```
    pyenv virtualenv 3.9.9 venv_3.9.9  
    pyenv virtualenv 3.9.9 another_3.9.9  
@@ -126,7 +126,7 @@
    * venv_3.9.9 --> /home/pakete/.pyenv/versions/3.9.9/envs/venv_3.9.9 (set by /home/pakete/vagrant/jdriver/.python-version)
    ```
 
-6. Or uninstall any sub-version:
+6. Or `uninstall` any sub-version:
    ```
    pyenv virtualenv-delete another_3.9.9
    ```
