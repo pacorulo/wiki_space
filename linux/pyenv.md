@@ -127,6 +127,6 @@ $ pyenv versions
 >
 
     6. Or uninstall any sub-version:
-    >
+    ```
       pyenv virtualenv-delete another_3.9.9
-
+    ```
