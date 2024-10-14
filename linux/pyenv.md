@@ -124,7 +124,7 @@
    3.9.9/envs/venv_3.9.9  
    another_3.9.9 --> /home/pakete/.pyenv/versions/3.9.9/envs/another_3.9.9  
    * venv_3.9.9 --> /home/pakete/.pyenv/versions/3.9.9/envs/venv_3.9.9 (set by /home/pakete/vagrant/jdriver/.python-version)
-```
+   ```
 
 6. Or uninstall any sub-version:
    ```
