@@ -80,50 +80,53 @@
    ```
 
 ## Installing virtual envs
-
 1. Check the available python versions:
-```
-pyenv install --list  
-```
+   ```
+   pyenv install --list  
+   ```
   
 2. Installing any from the list:
->
-pyenv install 3.9.9  
->
-
-    3. Checking current versions (already installed and managed by pyenv):
->
-$ pyenv versions  
-* system (set by /home/pakete/.pyenv/version)  
-  3.9.9  
->
-
-    4. Changing to the newly installed version (and checking we are currently using it):
->
-pyenv local 3.9.9  
->
-pyenv versions  
-  system  
-* 3.9.9 (set by /home/pakete/vagrant/jdriver/.python-version)
->
-
-    5. Now I can create other venvs under the one created and use each one for any purpose (but under same py version):
->
-pyenv virtualenv 3.9.9 venv_3.9.9  
-pyenv virtualenv 3.9.9 another_3.9.9  
->
-pyenv local venv_3.9.9  
->
-$ pyenv versions  
-  system  
-  3.9.9  
-  3.9.9/envs/another_3.9.9  
-  3.9.9/envs/venv_3.9.9  
-  another_3.9.9 --> /home/pakete/.pyenv/versions/3.9.9/envs/another_3.9.9  
-* venv_3.9.9 --> /home/pakete/.pyenv/versions/3.9.9/envs/venv_3.9.9 (set by /home/pakete/vagrant/jdriver/.python-version)
->
-
-    6. Or uninstall any sub-version:
-    ```
-      pyenv virtualenv-delete another_3.9.9
-    ```
+   ```
+   pyenv install 3.9.9  
+   ```
+  
+3. Checking current versions (already installed and managed by pyenv):
+   ```
+   $ pyenv versions  
+   * system (set by /home/pakete/.pyenv/version)  
+   3.9.9  
+   ```
+  
+4. Changing to the newly installed version (and checking we are currently using it):
+   ```
+   pyenv local 3.9.9  
+   ```
+  
+   ```
+   pyenv versions  
+   system  
+   * 3.9.9 (set by /home/pakete/vagrant/jdriver/.python-version)
+   ```
+  
+5. Now I can create other venvs under the one created and use each one for any purpose (but under same py version):
+   ```
+   pyenv virtualenv 3.9.9 venv_3.9.9  
+   pyenv virtualenv 3.9.9 another_3.9.9  
+   ```
+  
+   ```
+   pyenv local venv_3.9.9  
+  
+   $ pyenv versions  
+   system  
+   3.9.9  
+   3.9.9/envs/another_3.9.9  
+   3.9.9/envs/venv_3.9.9  
+   another_3.9.9 --> /home/pakete/.pyenv/versions/3.9.9/envs/another_3.9.9  
+   * venv_3.9.9 --> /home/pakete/.pyenv/versions/3.9.9/envs/venv_3.9.9 (set by /home/pakete/vagrant/jdriver/.python-version)
+```
+  
+6. Or uninstall any sub-version:
+   ```
+   pyenv virtualenv-delete another_3.9.9
+   ```
