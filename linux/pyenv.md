@@ -1,33 +1,30 @@
 # How to install pyenv
 
     1. First install python3:
-<ul>
+
 ```bash
 apt install python3
 ```
-</ul>
 
     2. Install pip3:
-<ul>
+
 ```bash
 sudo apt install pip3  
 
 $ pip3 --version  
 pip 22.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10)
 ```
-</ul>
 
-    3. Install package dependencies for **pyenv**
-<ul>
+    3. Install package dependencies for **pyenv**  
+    
 ```bash
 apt install build-essential libssl-dev zlib1g-dev \    
 libbz2-dev libreadline-dev libsqlite3-dev curl git \    
 libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 ```
-</ul>
 
     4. Finish the install of pyenv:
-<ul>
+
 ```bash
 $ curl https://pyenv.run | bash
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
@@ -80,15 +77,12 @@ eval "$(pyenv init -)"
 
 eval "$(pyenv virtualenv-init -)"
 ```
-</ul>
 
     5. I just added to .barshrc:
 
-<ul>
 ```
 eval "$(pyenv virtualenv-init -)"
 ```
-</ul>
 
 ## Installing virtual envs
 
