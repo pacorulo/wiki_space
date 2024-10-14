@@ -1,6 +1,6 @@
 # How to install pyenv
 
-    1. First install python3:
+1. First install python3:
 ```bash
 apt install python3
 ```
